@@ -51,13 +51,13 @@ class LoginController extends Controller
    
         if(auth()->attempt(array('email' => $input['email'], 'password' => $input['password'])))
         {
-            if (Auth::user()->roles == "admin") {
+            if (auth()->user()->roles == "admin") {
                 return redirect()->route('admin.home');
             }
-            if (Auth::user()->roles == "dosen") {
+            if (auth()->user()->roles == "dosen") {
                 return redirect()->route('dosen.home');
             }
-            if (Auth::user()->roles == "mahasiswa") {
+            if (auth()->user()->roles == "mahasiswa") {
                 return redirect()->route('mahasiswa.home');
             }
         // 
@@ -65,23 +65,6 @@ class LoginController extends Controller
            return redirect()->route('login')
                ->with('error','Email-Address And Password Are Wrong.');
         }
-    }
-
-    // public function redirectTo(){
-    //     if(Auth::user()->roles == "admin"){
-    //             $this->redirectTo = route('admin.home');
-    //             return $this->redirectTo;
-    //     }
-    //     if(Auth::user()->roles == "dosen"){
-    //             $this->redirectTo = route('dosen.home');
-    //             return $this->redirectTo;
-    //     }if(Auth::user()->roles == "mahasiswa"){
-    //             $this->redirectTo = route('mahasiswa.home');
-    //             return $this->redirectTo;
-    //     }
-    //     $this->redirectTo = '/';
-    //     return $this->redirectTo;
-    // }
-        
+    }   
 }
 

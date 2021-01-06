@@ -29,12 +29,13 @@ class HomeController extends Controller
     
     public function adminHome()
     {
-        // dd($auth);
+        // dd(Auth::user());
         return view('pages.admin.home');
     }
 
     public function dosenHome()
     {
+        // dd(Auth::user());
         return view('pages.dosen.home');
     }
 

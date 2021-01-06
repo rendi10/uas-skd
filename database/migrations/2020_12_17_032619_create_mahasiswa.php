@@ -15,8 +15,6 @@ class CreateMahasiswa extends Migration
     {
         Schema::create('mahasiswa', function (Blueprint $table) {
             $table->string('id_mahasiswa')->primary();
-            // $table->string('id_matkul');
-            // $table->foreign('id_matkul')->references('id_matkul')->on('matkul')->onDelete('cascade');
             $table->string('id_user');
             $table->foreign('id_user')->references('id_user')->on('users')->onDelete('cascade');
             $table->string('nama');

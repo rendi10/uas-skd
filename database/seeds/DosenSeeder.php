@@ -15,7 +15,7 @@ class DosenSeeder extends Seeder
             [
                'id_dosen'=>'DS1',
                'nama'=>'Pak Fiddin',
-               'id_user'=>'US3'
+               'id_user'=>'US3',
             ],
             [
                'id_dosen'=>'DS2',

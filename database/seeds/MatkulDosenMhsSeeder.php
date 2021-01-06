@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\MatkulC;
+use App\MatkulDosen;
 class MatkulDosenMhsSeeder extends Seeder
 {
     /**
@@ -13,15 +13,14 @@ class MatkulDosenMhsSeeder extends Seeder
     {
         $matkul = [
             [
-               'id_matkulDM'=>'IDM1',
+               'id_matkul_dosen'=>'ID1',
                'id_matkul'=>'MK1',
-               'id_dosen'=>'DS1',
-               'id_mahasiswa'=>'M1'
+               'id_dosen'=>'DS1'
             ],
         ];
   
         foreach ($matkul as $key => $value) {
-            MatkulC::create($value);
+            MatkulDosen::create($value);
         }
     }
 }

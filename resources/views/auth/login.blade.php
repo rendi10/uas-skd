@@ -9,6 +9,11 @@
                 {{ session()->get('error') }}
             </div>
             @endif
+            @if(session()->has('succes'))
+            <div class="alert alert-success">
+                {{ session()->get('succes') }}
+            </div>
+            @endif
             <div class="card">
                 <div class="card-header">{{ __('Login') }}</div>
                 <div class="card-body">

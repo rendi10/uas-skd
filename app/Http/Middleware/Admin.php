@@ -18,13 +18,13 @@ class Admin
      */
     public function handle($request, Closure $next)
     {
-        if (Auth::user() && Auth::user()->roles == "admin" ){
+        if (Auth::check() && auth()->user()->roles == "admin" ){
             return $next($request);
         }
-        if (Auth::user() && Auth::user()->roles == "dosen" ){
+        if (Auth::check() && auth()->user()->roles == "dosen" ){
             return $next($request);
         }
-        if (Auth::user() && Auth::user()->roles == "mahasiswa" ){
+        if (Auth::check() && auth()->user()->roles == "mahasiswa" ){
             return $next($request);
         }
         return redirect('/login')->with('error','Authentikasi gagal');

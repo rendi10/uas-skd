@@ -11,7 +11,7 @@
                 <footer class="main-footer">
                     <div class="footer-center">
                         Copyright &copy; 2020 <div class="bullet"></div><a href="https://tik.uns.ac.id"
-                            target="_blank">Maganger UPT TIK UNS</a>
+                            target="_blank">Rendi Jaka Susanto</a>
                     </div>
                 </footer>
         </div>
